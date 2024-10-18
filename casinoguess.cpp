@@ -12,9 +12,9 @@ int main(){
     cout << "If you lose in this round, you walk away with nothing and you get disqualifies for the next round"<<endl;
     cout << "How much would you like to deposit (You can deposit your live savings, you have a chance to double it)"<<endl;
     cin >> userDep;
-    //srand(time(nullptr)); //comment this line when testing
-    //int randNum = rand() % 10+1; //comment this line when testing
-    srand(2); // this is for testing
+    srand(time(nullptr)); //comment this line when testing
+    int randNum = rand() % 10+1; //comment this line when testing
+    //srand(2); // this is for testing
     int randNum = rand(); //this is for testing
     cout <<"Enter your number guess between 1 and 10"<<endl;
     cin >> userGuess;
@@ -35,8 +35,8 @@ int main(){
             userWin *=4;
             cout<<"Let the round begin"<<endl;
             cout<<"Enter your guess[1 to 1000]"<<endl;
-            randNum = rand(); //for testing
-            //randNum = rand()%1000+1;
+            //randNum = rand(); //for testing
+            randNum = rand()%1000+1;
             cin>>userGuess;
             if (userGuess == randNum){
                  cout <<"You win $"<< userWin <<", CONGRATULATIONS!!!"<<endl;
